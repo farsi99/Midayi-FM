@@ -1,0 +1,79 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Edit Actualite
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{asset('admin/css/bootstrap3-wysihtml5.min.css')}}">
+{% endblock %}
+
+{% block body %}
+    <!-- Content Wrapper. Contains page content -->
+    <div
+        class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        {% include "partials/mini-header-admin.html.twig" %}
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-info">
+
+
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Bootstrap WYSIHTML5
+                                    <small>Simple and fast</small>
+                                </h3>
+                                {{ include('admin/actualite/_form.html.twig', {'button_label': 'Update'}) }}
+
+                                <a href="{{ path('admin_actualite_index') }}">back to list</a>
+
+                                {{ include('admin/actualite/_delete_form.html.twig') }}
+                                <!-- tools box -->
+                                <div class="pull-right box-tools">
+                                    <button class="btn btn-default btn-sm" data-toggle="tooltip" data-widget="collapse" title="Collapse" type="button">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                    <button class="btn btn-default btn-sm" data-toggle="tooltip" data-widget="remove" title="Remove" type="button">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </div>
+                                <!-- /. tools -->
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body pad">
+                                <form>
+                                    <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-->
+                </div>
+                <!-- ./row -->
+            </section>
+            <!-- /.content -->
+        </div>
+
+
+    {% endblock %}
+    {% block javascrpts %}
+        <script src="{{asset('admin/ckeditor/ckeditor.js')}}">
+
+
+
+</script>
+        <script src="{{asset('admin/js/bootstrap3-wysihtml5.all.min.js')}}">
+
+
+
+</script>
+        <script  src="{{asset('admin/js/scriptCKeditor.js')}}">
+
+
+
+</script>
+
+    {% endblock %}

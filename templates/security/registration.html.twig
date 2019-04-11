@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    {% include "partials/mini-header.html.twig" %}
+    <section class="ls section_padding_top_75 section_padding_bottom_100 column_margin_0">
+        <div class="container">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">{{message}}</div>
+            {% endfor %}
+            {{form_start(form)}}
+            {{form_widget(form)}}
+            <div class="row bottommargin_10">
+                <div class="col-sm-12">
+                    <p class="contact-form-submit">
+                        <button class="theme_button color1 margin_0" id="contact_form_submit" name="contact_submit" type="submit">Inscription</button>
+                    </p>
+                </div>
+            </div>
+            {{form_end(form)}}
+        </div>
+    </section>
+{% endblock %}

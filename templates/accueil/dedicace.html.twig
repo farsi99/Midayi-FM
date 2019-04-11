@@ -1,0 +1,146 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Vos dédicaces
+{% endblock %}
+{% block body %}
+    {% include "partials/mini-header.html.twig" %}
+    <section class="ls ms section_padding_top_75 section_padding_bottom_25">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p class="grey">
+                            368 Sarah Drive, Lafayette, LA 70506
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <p class="grey">
+                            8 (800) 695-2684 / 8 (800) 695-2686
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 to_animate" data-animation="pullDown">
+                    <div class="teaser text-center">
+                        <div class="teaser_icon highlight size_small">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <p class="bold grey">justice@support.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ls section_padding_top_75 section_padding_bottom_100 column_margin_0">
+        <div class="container">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">{{message}}</div>
+            {% endfor %}
+            {{form_start(form)}}
+            <div class="row">
+                <div class="col-sm-12 to_animate">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="contact-form-civilite">
+                                {{ form_label(form.civilite, 'Civilité', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.civilite, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre civilité'}}) }}<i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="contact-form-nom">
+                                {{form_errors(form.nom)}}
+                                {{ form_label(form.nom, 'Nom', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.nom, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre nom'}}) }}<i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="contact-form-prenom">
+                                {{ form_label(form.prenom, 'Prénom', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.prenom, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre prénom'}}) }}<i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="contact-form-phone">
+                                {{ form_label(form.telephone, 'Téléphone', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.telephone, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre Téléphone'}}) }}<i class="fa fa-phone"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            {{form_errors(form.email)}}
+                            <div class="contact-form-email">
+
+                                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.email, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre email'}}) }}<i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="contact-form-subject">
+                                {{ form_label(form.adresse, 'Adresse', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.adresse, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre adresse'}}) }}<i class="fa fa-thumb-tack"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="contact-form-codePostal">
+                                {{ form_label(form.codePostal, 'CP', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.codePostal, {'attr':{'class':'form-control with-icon', 'placeholder':'Code postal'}}) }}<i class="fa fa-inbox"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="contact-form-ville">
+                                {{ form_label(form.ville, 'Ville', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.ville, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre ville'}}) }}<i class="fa fa-home"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="contact-form-chanson">
+                                {{ form_label(form.chanson, 'Chanson', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.chanson, {'attr':{'class':'form-control with-icon', 'placeholder':'Votre chanson'}}) }}<i class="fa fa-music"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="contact-form-chanson">
+                                {{ form_label(form.typeChanson, 'Type Chanson', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.typeChanson, {'attr':{'class':'form-control with-icon', 'placeholder':'Type chanson'}}) }}<i class="fa fa-music"></i>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="contact-form-artisite">
+                                {{ form_label(form.artisite, 'Artiste', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.artisite, {'attr':{'class':'form-control with-icon', 'placeholder':'La chanson de (Chanteur)'}}) }}<i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="contact-form-destinataire">
+                                {{ form_label(form.destinataire, 'Destinataire', {'label_attr': {'class': 'sr-only'}}) }}
+                                {{form_widget(form.destinataire, {'attr':{'class':'form-control with-icon', 'placeholder':'Je dédie cette chanson à'}}) }}<i class="fa fa-pencil"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bottommargin_10">
+                        <div class="col-sm-12">
+                            <p class="contact-form-submit">
+                                <button class="theme_button color1 margin_0" id="contact_form_submit" name="contact_submit" type="submit">Envoyer</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{form_end(form)}}
+        </div>
+    </section>
+{% endblock %}

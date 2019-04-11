@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    {% include "partials/mini-header.html.twig" %}
+    <section class="ls section_padding_top_75 section_padding_bottom_100 column_margin_0">
+        <div class="container">
+            {% if error %}
+                <div class="alert alert-danger">Votre login ou mot de passe est incorrecte</div>
+            {% endif %}
+            <form method="post" action="{{path('security_login')}}">
+                <div class="col-sm-4">
+                    <div class="contact-form-nom">
+                        <input type="email" name="_username" placeholder="adresse email" class="form-control" required="true" value="{{utilisateur}}">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contact-form-nom">
+                        <input class="form-control" name="_password" placeholder="mot de passe" required="true" type="password">
+                    </div>
+                </div>
+                <input name="_target_path" type="hidden" value="security_success">
+                <div class="row bottommargin_10">
+                    <div class="col-sm-4">
+                        <p class="contact-form-submit">
+                            <button class="theme_button color1 margin_0" id="contact_form_submit" name="contact_submit" type="submit">Connexion</button>
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+{% endblock %}

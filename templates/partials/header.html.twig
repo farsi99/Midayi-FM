@@ -1,0 +1,114 @@
+<body>
+    <div class="preloader">
+        <div class="preloader_image"></div>
+    </div>
+    <!--[if lt IE 9]>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <![endif]-->
+    <!-- search modal -->
+    <div aria-labelledby="search_modal" class="modal" id="search_modal" role="dialog" tabindex="-1">
+        <div class="widget widget_search">
+            <form action="/" class="searchform form-inline" method="get">
+                <div class="form-group">
+                    <input class="form-control" id="modal-search-input" name="search" placeholder="Search keyword" type="text" value=""></div>
+                    <button class="theme_button" type="submit">Recherche</button>
+                </form>
+            </div>
+        </div>
+        <!-- wrappers for visual page editor and boxed version of template -->
+        <div id="canvas">
+            <div
+                id="box_wrapper">
+                <!-- template sections -->
+                <section class="page_topline ds table_section transparent_section columns_padding_0">
+                    <div class="fluid-container">
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-12 text-center text-sm-left">
+                                <div class="page_social_icons">
+                                    <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
+                                    <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
+                                    <a class="social-icon color-icon soc-google" href="#" title="Google"></a>
+                                    <a class="social-icon color-icon soc-skype" href="#" title="Skype"></a>
+                                    <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 text-center">
+                                <h4>
+                                    RADIO
+                                    <a class="logo logo_image hidden-lg" href="./">
+                                        <img alt="" src="images/logo.png" width="150px"></a>
+                                        COMORES DE LYON
+                                    </h4>
+                                </div>
+                                <div class="col-sm-3 col-xs-12 text-center text-sm-right">
+                                    <div class="top_meta">
+                                        <i class="fa fa-phone highlight"></i>
+                                        <span class="vidaloka grey">09 53 30 07 02</span>
+                                        <a class="search_modal_button" href="#">
+                                            <i class="fa fa-search highlight"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <header class="page_header header_white columns_padding_0">
+                        <div class="fluid-container">
+                            <div class="row display_table_md">
+                                <div class="col-lg-2 col-md-3 col-xs-6 nowrap hidden-md display_table_cell_md hidden-xs">
+                                    <div class="logo">
+                                        <a href="{{path('accueil')}}">
+                                            <img alt="" src="images/logo.png"></a>
+                                        </div>
+                                        <div class="page_social_icons">
+                                            <a class="social-icon color-icon soc-facebook" href="#" title="Facebook"></a>
+                                            <a class="social-icon color-icon soc-twitter" href="#" title="Twitter"></a>
+                                            <a class="social-icon color-icon soc-google" href="#" title="Google"></a>
+                                            <a class="social-icon color-icon soc-skype" href="#" title="Skype"></a>
+                                            <a class="social-icon color-icon soc-youtube" href="#" title="Youtube"></a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-lg-8 col-md-12 text-right text-md-center display_table_cell_md">
+                                        <!-- main nav start -->
+                                        <nav class="mainmenu_wrapper inline-block">
+                                            <ul class="mainmenu nav sf-menu">
+                                                <li class="active">
+                                                    <a href="{{ path('accueil') }}">Accueil</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ path('midayi')}}">A propos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="program.html">Programmes</a>
+                                                </li>
+                                                <!-- blog -->
+                                                <li>
+                                                    <a href="blog-right.html">Actualité</a>
+                                                </li>
+                                                <!-- eof blog -->
+                                                <!-- gallery -->
+                                                <li>
+                                                    <a href="{{path('dedicace')}}">Dédicaces</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <!-- eof main nav -->
+                                        <span class="toggle_menu">
+                                            <span></span>
+                                        </span>
+                                        <a class="theme_button color1 donate" href="#" style="padding: 0px 20px !important;">
+                                            <img src="images/ecouters.png">ECOUTER
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                								MIDAYI FM</a>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3 text-right nowrap hidden-md hidden-sm hidden-xs display_table_cell_md">
+                                            <div class="top_meta">
+                                                <i class="fa fa-phone highlight"></i>
+                                                <span class="vidaloka grey">09 53 30 07 02</span>
+                                                <a class="search_modal_button" href="#">
+                                                    <i class="fa fa-search highlight"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
