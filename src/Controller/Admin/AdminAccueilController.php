@@ -17,6 +17,7 @@ class AdminAccueilController extends AbstractController
     {
         return $this->render('admin/accueil/index.html.twig', [
             'title' => 'Amdin Midayi FM',
+            'titre' => 'Tableau de bord'
         ]);
     }
 }

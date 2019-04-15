@@ -73,16 +73,25 @@ class ActualiteRepository extends ServiceEntityRepository
      * @param [type] $value
      * @return void
      */
-    public function getActualtes(Actualite $actu, int $limit = 0)
+    public function getActualtes(TypeActualite $actu)
     {
-        $query = $this->createNamedQuery('a')
-            ->where('a.typeActualite = typeactualite')
-            ->setParameter('typeactualite', $actu->getTypeActualite())
-            ->setMaxResult($limit)
+        dump($actu);
+        return $this->createQueryBuilder('a')
+            ->addSelect('t')
+            ->leftJoin('a.typeActualite', 't')
+            ->where('t.station = :station')
+            ->setParameter('station', $actu->getStation())
             ->getQuery()
             ->getResult();
-        return $query;
     }
+
+    /**
+     * Cette méthode permet de retourner les pages 
+     *
+     * @param [type] $value
+     * @return void
+     */
+
 
     // /**
     //  * @return Actualite[] Returns an array of Actualite objects
