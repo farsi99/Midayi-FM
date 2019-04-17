@@ -27,7 +27,7 @@ class ActualiteController extends AbstractController
         $actus = $actualiteRepository->getActualtes($type);
         return $this->render('admin/actualite/index.html.twig', [
             'actualites' => $actus,
-            'titre' => 'Liste des posts'
+            'titre' => 'Liste des articles'
         ]);
     }
 

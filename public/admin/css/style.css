@@ -1,0 +1,6 @@
+#example1_filter{
+    float: right !important;
+}
+.btn-group-sm > .btn, .btn-sm{
+    padding: 5px 6px !important;
+}
